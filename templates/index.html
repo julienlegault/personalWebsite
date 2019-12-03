@@ -1,8 +1,53 @@
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="static/stylesheet.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"/>
+		<script>
+			function myFunction() {
+				var x = document.getElementById("Navigation Menu");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+		</script>
 	</head>
 	<body>
-		<a href="http://julienlegault.freemyip.com:5000">Date Ideas</a><br>
-		<a href="http://julienlegault.freemyip.com:9874">Light Colors</a>
+		<div class="topnav" id="Navigation Menu">
+			<a href="http://julienlegault.freemyip.com" class="active">Home</a>
+			<a href="static/LegaultResume.pdf">Resume</a>
+			<a href="http://julienlegault.freemyip.com/dates">Date Ideas</a>
+			<a href="http://julienlegault.freemyip.com/lights">Light Colors</a>
+			<a href="http://julienlegault.freemyip.com/login">Login</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+		<div class="contentBox" id="aboutMe">
+			<img src="static/headshot.png" alt="Picture of Julien">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero est, tincidunt eget tempor tincidunt, semper sit amet sapien. Pellentesque nulla nunc, posuere et scelerisque ut, aliquet vel lacus. Vestibulum et elit varius, mollis turpis ac, fermentum mauris. Nulla facilisi. Maecenas viverra bibendum purus at pellentesque. Etiam tincidunt elit vitae tortor vulputate, quis tincidunt turpis tempor. Suspendisse potenti. Sed sit amet scelerisque ligula.
+
+Proin elementum turpis ipsum, et blandit nisi lobortis non. Proin sit amet gravida ante, nec finibus nibh. Etiam eu dictum est. Aenean porta elementum rutrum. Nam fringilla tempus pharetra. Ut euismod euismod tincidunt. Aliquam erat volutpat. Donec non placerat lacus. Mauris at justo sagittis, suscipit purus a, feugiat diam.
+
+Donec varius lectus eget erat scelerisque, sit amet vestibulum ligula sagittis. Morbi hendrerit, eros eu convallis accumsan, massa diam posuere velit, vel interdum elit est placerat neque. In consequat viverra diam, et vulputate neque ultrices in. Sed consectetur elit erat. Aliquam ullamcorper, massa non laoreet porta, ipsum felis auctor tortor, eu sodales tortor purus ac purus. Nam finibus hendrerit lectus eget auctor. Pellentesque in tempor leo. Quisque vel urna finibus, fermentum elit eget, vulputate nisl. Quisque molestie mattis erat.
+
+Etiam non mi non nibh fermentum tristique. Aliquam in magna eu purus dignissim pulvinar id vel sem. Nulla facilisi. Nulla maximus mattis laoreet. Donec tempus egestas mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris sed massa interdum, tempor nibh vel, varius ex. Nunc feugiat nunc sed vehicula lobortis. Phasellus mauris arcu, efficitur at tellus at, cursus scelerisque diam. Nullam risus odio, fermentum eu commodo non, luctus sit amet metus.</p>
+		</div>
+		<div class="contentBox" id="gitHub">
+			<script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
+			Loading GitHub data.
+		</div>
+		<script> new GitHubCalendar("#gitHub", "julienlegault");</script>
+		<div class="contentBox" id="twitter">
+			<a class="twitter-timeline" data-width="350" data-height="600" href="https://twitter.com/aquinArtifact?ref_src=twsrc%5Etfw">Tweets by aquinArtifact</a>
+			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		<div class="footer">
+			<a href="https://www.github.com/julienlegault">GitHub</a>
+			<a href="https://twitter.com/aquinArtifact">Twitter</a>
+		</div>
 	</body>
 </html>
