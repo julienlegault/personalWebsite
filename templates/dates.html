@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/static/stylesheet.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
+		<style type="text/css">
+			#DateOut{
+				visibility: {{ResultVisable}} !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="outerContainer">
+			<div class="column" id="Form">
+			<h2>Get Random Dates</h2>
+			<form action="/" method="post">
+				<div class="FoodBoxes">
+				<span><input type="checkbox" name="isFood" value="True"> Food</span>
+				<span><input type="checkbox" name="isNotFood" value="True"> Not Food</span>
+				</div>
+				<div class="OutsideBoxes">
+				<span><input type="checkbox" name="isOutside" value="True"> Outside Dates</span>
+				<span><input type="checkbox" name="isNotOutside" value="True"> Inside Dates</span>
+				</div>
+				<input type="number" name="minPrice" min="0" max="300" value="0">Minimum Price<br>
+				<input type="number" name="maxPrice" min="0" max="300" value="300">Maximum Price<br>
+				<input type="submit" value="Get Random Date"><br>
+			</form>
+			</div>
+			<div class="column" id="DateOut">
+				<!--<div>{{currentPos}}</div>-->
+				<div id="dateName">{{DateName}}</div>
+				<div id="datePrice">{{DatePrice}}</div>
+				<div id="dateDescription">{{DateDescription}}</div>
+				<div id="locationName">{{LocationName}}</div>
+				<div id="googleMap"><img src="{{GoogleMap}}" /></div>
+			</div>
+			<!--<div class="column" style="display: none; width: 0%">
+				<input type="button" value="Add Date" onclick="addDate()"><br>
+				<input type="button" value="Add Location" onclick="addLoc()"><br>
+				<input type="button" value="Link Date/Location" onclick="linkD2L()"><br>
+				<input type="button" value="Update Records" onclick="updateRecords()"><br>
+			</div>-->
+		</div>
+	</body>
+</html>

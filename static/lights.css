@@ -1,0 +1,15 @@
+html{
+	font-size: 30px;
+	background-color: #d9d9d9;
+	font-family: geneva, arial, times;
+}
+
+input[type=color] {
+	zoom: 4;
+	padding: 10px;
+}
+
+input[type=submit] {
+	zoom: 4;
+	padding: 10px;
+}
