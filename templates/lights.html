@@ -1,9 +1,33 @@
 <html>
-   <head>
-      <link type="text/css" rel="stylesheet" href="static/lights.css"/>
+<head>
+	<link type="text/css" rel="stylesheet" href="static/lights.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-a    wesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-cal    endar/gh-pages/dist/github-calendar.css"/>
+	<link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
+	<script>
+		function myFunction() {
+			var x = document.getElementById("Navigation Menu");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
       <title>Change Light Color</title>
    </head>
    <body>
+	<div class="topnav" id="Navigation Menu">
+		<a href="http://julienlegault.freemyip.com" class="active">Home</a    >
+		<a href="static/LegaultResume.pdf">Resume</a>
+		<a href="http://julienlegault.freemyip.com/dates">Date Ideas</a>
+		<a href="http://julienlegault.freemyip.com/lights">Light Colors</a    >
+		<a href="http://julienlegault.freemyip.com/login">Login</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+
       <div id="header" style="background-color: {{CurrentColor}}">
          <h1>Change Light Color</h1>
       </div>
