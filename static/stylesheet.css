@@ -49,65 +49,41 @@
   }
 }
 
-img{
-	width: 400px;
-	height: 400px;
-}
-
-h2{
-	padding: 2px;
-}
-
-input[type=checkbox] {
-	zoom: 2;
-	padding: 5px;
-}
-
-input[type=number] {
-	zoom: 2;
-	padding: 5px;
-}
-
-input[type=submit] {
-	zoom: 3;
-}
-
-span {
-	display: inline;
-	width: 50%;
-}
-
-.column {
-	width: 80%;
-	display: block;
-	font-size: 1.5em;
-	padding: 5px;
-}
-
-@media only screen and (min-width: 768px) {
-	*{
-		box-sizing: border-box;
-		margin: auto;
-	}
-	.column {
-		width: 50%;
-		display: inline-table;
-		font-size: 1.5em;
-	}
-}
-
-.outerContainer {
+.contentBox {
 	width: 100%;
-	content: "";
-	display: table;
+	font-size: auto;
+}
+
+.contentBox img {
+	width: 350px;
+	height: 40px;
+	margin: 15px;
+	display: inline;
+}
+
+.contentBox p {
+	margin: 15px;
+	float: left;
+	display: inline;
+}
+
+#gitHub {
+	width: 50% !important;
+	float: left;
+	display: inline;
+}
+
+#twitter {
+	width: 50% !important;
+	float: right;
+	display: inline;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
 	text-align: center;
 }
-
-#dateName {
-	font-size: 3em;
-}
-
-#datePrice {
-	font-size: 1em;
-}
-
+	

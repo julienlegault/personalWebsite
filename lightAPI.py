@@ -1,11 +1,12 @@
 import pigpio
 
+pi = pigpio.pi()
+RED_PIN = 17
+GREEN_PIN = 22
+BLUE_PIN = 24
+colorQueue = []
+
 class lightAPI:
-	pi = pigpio.pi()
-	RED_PIN = 17
-	GREEN_PIN = 22
-	BLUE_PIN = 24
-	colorQueue = []
 	
 	def getCurrentColor():
 		currentColor = open("cc.txt", "r")
