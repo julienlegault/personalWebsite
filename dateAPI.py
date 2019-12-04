@@ -4,12 +4,12 @@ import random
 
 class dateAPI:
 	
-	def getRandomLocaion(dateId):
+	def getRandomLocation(dateId):
 		conn=sqlite3.connect('dateDatabase.db')
 		curs=conn.cursor()
 		resultList = []
 		result = []
-		for row in curs.execute("SELECT l.lat, l.lon FROM dates d INNER JOIN d2l r on r.da    teId = d.id INNER JOIN locations l on l.id = r.locId where d.id = " + str(dateId)):
+		for row in curs.execute("SELECT l.lat, l.lon FROM dates d INNER JOIN d2l r on r.dateId = d.id INNER JOIN locations l on l.id = r.locId where d.id = " + str(dateId)):
 			resultList.append(row)
 		try:
 			result = random.choice(resultList)
@@ -32,7 +32,7 @@ class dateAPI:
 	def getRandomDate(isFood, isNotFood, isOutside, isNotOutside, distance, minPrice, maxPrice):
 		conn=sqlite3.connect('dateDatabase.db')
 		curs=conn.cursor()
-		sql = "SELECT * FROM dates WHERE (price > " + str(minPrice) + " AND price < " + st    r(maxPrice) + ") "
+		sql = "SELECT * FROM dates WHERE (price > " + str(minPrice) + " AND price < " + str(maxPrice) + ") "
 		if(isFood == 'True' and not isNotFood == 'True'):
 			sql += " AND isFood = 1"
 		elif(isNotFood == 'True' and not isFood == 'True'):

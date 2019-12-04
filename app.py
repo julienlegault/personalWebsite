@@ -1,15 +1,15 @@
 from flask import Flask, render_template, request
 from constants import IpConstants
-from lightAPI import lightAPI as lights
+#from lightAPI import lightAPI as lights
 from dateAPI import dateAPI as dates
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def index():
 	return render_template('index.html')
 
-@app.route('/lights')
+'''@app.route('/lights')
 def lights():
 	currentColor = lights.getCurrentColor()
 	templateData = {
@@ -26,14 +26,7 @@ def lightForm():
 	templateData = {
 		'CurrentColor': hexCode
 	}
-	return render_template('lights.html', **templateData)
-
-@app.route('/dates')
-def dates():
-		templateData = {
-			'ResultVisable': 'hidden'
-		}
-		return render_template('dates.html', **templateData)
+	return render_template('lights.html', **templateData)'''
 
 @app.route('/dates', methods=['POST', 'GET'])
 def datesForm():
@@ -54,6 +47,10 @@ def datesForm():
 			'DateDescription' : 'Is food' if date[3] else 'Is not food',
 			'LocationName' : 'Is outside' if date[4] else 'Is not outside',
 			'GoogleMap': dates.getMap(dates.getRandomLocation(date[0]))
+		}
+	else:
+		templateData = {
+			'ResultVisable': 'hidden'
 		}
 	return render_template('dates.html', **templateData)
 
