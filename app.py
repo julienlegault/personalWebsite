@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from constants import IpConstants
-#from lightAPI import lightAPI as lights
+from lightAPI import lightAPI as lights
 from dateAPI import dateAPI as dates
 
 app = Flask(__name__)
@@ -9,7 +9,7 @@ app = Flask(__name__)
 def index():
 	return render_template('index.html')
 
-'''@app.route('/lights')
+@app.route('/lights')
 def lights():
 	currentColor = lights.getCurrentColor()
 	templateData = {
@@ -26,7 +26,7 @@ def lightForm():
 	templateData = {
 		'CurrentColor': hexCode
 	}
-	return render_template('lights.html', **templateData)'''
+	return render_template('lights.html', **templateData)
 
 @app.route('/dates', methods=['POST', 'GET'])
 def datesForm():
