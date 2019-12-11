@@ -61,7 +61,7 @@
 	display: inline;
 }
 
-.contentBox p {
+.contentBox span {
 	margin: 15px;
 	float: right;
 	display: inline;
