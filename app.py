@@ -54,7 +54,9 @@ def datesForm():
 		}
 	return render_template('dates.html', **templateData)
 
-
+@app.route('/login')
+def login():
+	return render_template('login.html')
 
 if __name__ == '__main__':
 	app.run(debug=True, host=IpConstants.__IP__, port=IpConstants.__PORT__)
