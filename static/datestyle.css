@@ -1,14 +1,3 @@
-html{
-	font-size: 20px;
-	background-color: #d9d9d9;
-	font-family: geneva, arial, times;
-}
-
-
-h2{
-	padding: 2px;
-}
-
 input[type=checkbox] {
 	zoom: 2;
 	padding: 5px;
@@ -27,38 +16,3 @@ span {
 	display: inline;
 	width: 50%;
 }
-
-.column {
-	width: 80%;
-	display: block;
-	font-size: 1.5em;
-	padding: 5px;
-}
-
-@media only screen and (min-width: 768px) {
-	*{
-		box-sizing: border-box;
-		margin: auto;
-	}
-	.column {
-		width: 50%;
-		display: inline-table;
-		font-size: 1.5em;
-	}
-}
-
-.outerContainer {
-	width: 100%;
-	content: "";
-	display: table;
-	text-align: center;
-}
-
-#dateName {
-	font-size: 3em;
-}
-
-#datePrice {
-	font-size: 1em;
-}
-

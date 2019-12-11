@@ -8,7 +8,7 @@ colorQueue = []
 
 class lightAPI:
 	
-	def getCurrentColor():
+	def getCurrentColor(self):
 		currentColor = open("cc.txt", "r")
 		pushCol = currentColor.read()
 		currentColor.close()
